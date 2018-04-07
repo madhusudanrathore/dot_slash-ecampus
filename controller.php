@@ -35,4 +35,20 @@
 		$m->new_blog( $email, $heading, $content, $department, $post );
 		header("location: ./index.php");
 	}
+	if(isset($_POST['lost_item_btn'])){/*IF LOST ITEM BUTTON IS CLICKED*/
+		$email = $_SESSION['user_email'];
+		$heading = $_POST['lost_heading'];
+		$content = $_POST['lost_content'];
+		$type = "LOST";
+		$m->lost_found_function( $email, $heading, $content, $type );
+		header("location: ./lost_found.php");
+	}
+	if(isset($_POST['found_item_btn'])){/*IF LOST ITEM BUTTON IS CLICKED*/
+		$email = $_SESSION['user_email'];
+		$heading = $_POST['found_heading'];
+		$content = $_POST['found_content'];
+		$type = "FOUND";
+		$m->lost_found_function( $email, $heading, $content, $type );
+		header("location: ./lost_found.php");
+	}
 ?>
