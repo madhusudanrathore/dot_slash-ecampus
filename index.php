@@ -21,33 +21,23 @@
 				?>
 				<h1>NO BLOGS TO DISPLAY!</h1>
 				<?php } ?>
-			
+
 				<h3 style="color: #0EA300; border-bottom: #0EA300 solid 2px;">FEES UPDATE</h3>
-					<div class="jumbotron">
-						<p>
-							Students are supposed to pay their fees using the given link.<br>
-							<b>Online Fees Payment Link:</b>
-							<a href="https://www.eduqfix.com/OnlineForms/ldadmissionform/add" target="_blank">PAY FEES</a>
-						</p>
+				<div class="jumbotron">
+					<p>
+						Students are supposed to pay their fees using the given link.<br>
+						<b>Online Fees Payment Link:</b>
+						<a href="https://www.eduqfix.com/OnlineForms/ldadmissionform/add" target="_blank">PAY FEES</a>
+					</p>
 
-						<p>
-							Dear Students,<br>Instructions for Fee Payment ( HDFC )<br>All students to go through the notice carefully for online payment before making payment. All the relevant details after opening the form should be filled correctly. Generate both the fee receipt and payment acknowledgement slip. Do not pay fees after the last date without permission. Otherwise their payment will not be valid. Kindly inform all your friends regarding this.<br>
-							Thanking you,<hr><br>Student Section,<br>L. D. College of Engineering,
-							<br>Ahmedabad - 380015, GJ, IN
-						</p>
-					</div>
+					<p>
+						Dear Students,<br>Instructions for Fee Payment ( HDFC )<br>All students to go through the notice carefully for online payment before making payment. All the relevant details after opening the form should be filled correctly. Generate both the fee receipt and payment acknowledgement slip. Do not pay fees after the last date without permission. Otherwise their payment will not be valid. Kindly inform all your friends regarding this.<br>
+						Thanking you,<hr><br>Student Section,<br>L. D. College of Engineering,
+						<br>Ahmedabad - 380015, GJ, IN
+					</p>
 				</div>
-
-				<div class="col-md-2">
-					<p class="lead" style="color: #808080; border-bottom: #0EA300 solid 2px;">Also explore:</p>
-						<a href="#" class="btn btn-success" role="button">LOST AND FOUND</a><br><br>
-						<a href="#" class="btn btn-success" role="button">CANTEEN</a><br><br>
-						<a href="#" class="btn btn-success" role="button">E-LIBRARY</a><br><br>
-						<a href="#" class="btn btn-success" role="button">CLUBS</a><br><br>
-						<a href="#" class="btn btn-success" role="button">CAMPUS OLX</a><br><br>
-						<a href="#" class="btn btn-success" role="button">MONTHLY REPORT</a>
-				
-				</div>
+			</div>
+			<?php require 'utility_display.php' ?>
 		</div>
 	</div>
 
