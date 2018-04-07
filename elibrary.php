@@ -3,7 +3,8 @@
 	<div class="container">
 
 		<?php if($_SESSION['user_type'] == "AUTHORITY" ) { ?>
-		<p id="show_new_book_form" class="btn btn-info" target="_blank">Upload Book</p>
+
+		<a id="new_book_btn" class="btn btn-info" target="_blank">Upload Book</a>
 		<form id="new_book_form" method="POST" action="./controller.php">
 			<div class="form-group">
 				<input type="text" class="form-control" placeholder="Book Name Here" name="book_name">
@@ -20,12 +21,13 @@
 	  			<input type="submit" name="insert_new_book" value="Upload">
 			</div>
 		</form>
+
 		<?php } ?>
 
 		<br /><br />
 
-		<p class="lead">Search books</p>
-		<form method="POST" action="./controller.php">
+		<a id="search_book_btn" class="btn btn-info">Search books</a>
+		<form id="search_book_form" method="POST" action="./controller.php">
 			<div class="form-group">
 				<input type="text" class="form-control" name="book_name" placeholder="Book name goes here"><br />
 				<input type="text" class="form-control" name="author_name" placeholder="Author name goes here">
@@ -37,45 +39,20 @@
 	  			<input type="radio" name="department_type" value="CSE">C.S.E.
 	  			<input type="radio" name="department_type" value="EE">Electrical
 	  			<br /><br />
+	  			<input type="submit" name="get_book_btn" value="Search">
 			</div>
 		</form>
-
-	<?php
-		$m = new model();
-		$result = $m->get_book_list();
-		if ($result->num_rows > 0) {
-			$count = 0;
-			while($row = $result->fetch_assoc()) {
-				++$count;
-	?>
-		<table class="table table-striped">
-			<tr>
-				<th>Index</th>
-				<th>Book Name</th>
-				<th>Author</th>
-				<th>Department</th>
-				<th>Google Link</th>
-			</tr>
-			<tr>
-				<td><p class="lead"><?php echo $count; ?></p></td>
-				<td><p class="lead"><?php echo $row["NAME"]; ?></p></td>
-				<td><p class="lead"><?php echo $row["AUTHOR"]; ?></p></td>
-				<td><p class="lead"><?php echo $row["DEPARTMENT"]; ?></p></td>
-				<td><p class="lead"><a class="btn btn-link" target="_blank" href="<?php echo $row["LINK"]; ?>">View PDF</a></td>
-			</tr>
-		</table>
-	<?php }
-		}else{
-	?>
-		<h1>NO BOOKS TO DISPLAY!</h1>
-	<?php } ?>
-	</div>
 
 	<script type="text/javascript">
 		$(document).ready(function () {
 			$("#new_book_form").hide();
-			$("#show_new_book_form").click(function () {
+			$("#search_book_form").hide();
+
+			$("#new_book_btn").click(function () {
 				$("#new_book_form").toggle();
+			});
+			$("#search_book_btn").click(function () {
+				$("#search_book_form").toggle();
 			});
 		});
 	</script>
