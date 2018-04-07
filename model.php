@@ -82,5 +82,26 @@
 			$result = $this->conn->query($get_data_query);
 			return $result;
 		}
+		function new_query( $email_param, $heading_param, $content_param, $department_type_param,$img_param){
+			$email = $email_param;
+			$new_query_query = "INSERT INTO query_table ( DEPARTMENT, HEADING, DESCRIPTION, OWNER ,image) VALUES ( '$department_type_param', '$heading_param', '$content_param', '$email','$img_param' )";
+			if ($this->conn->query($new_query_query) === FALSE ) {  echo "Error: " . $new_query_query . " " . $this->conn->error;  }
+		}
+		function get_query_data( ){
+			$get_data_query = "SELECT * FROM query_table";
+			$get_comments = "SELECT * FROM comments WHERE ";
+			$result = $this->conn->query($get_data_query);
+			return $result;
+		}
+		function new_comment( $qid_param,$content_param,$email_param){
+			$email = $email_param;
+			$new_query_query = "INSERT INTO comments (cid,CONTENT,OWNER) VALUES ( '$qid_param','$content_param','$email')";
+			if ($this->conn->query($new_query_query) === FALSE ) {  echo "Error: " . $new_query_query . " " . $this->conn->error;  }
+		}
+		function get_comments($qid_param){
+			$get_data_query = "SELECT * FROM comments WHERE cid='$qid_param'";
+			$result = $this->conn->query($get_data_query);
+			return $result;
+		}
 	}
 ?>
