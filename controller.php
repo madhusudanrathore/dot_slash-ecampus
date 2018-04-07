@@ -85,4 +85,13 @@
 		$m->get_book_list( $name, $author, $department );
 		header("location: ./elibrary_display.php");
 	}
+	if (isset($_POST['order'])) {
+		$name=$_POST['name'];
+		$enrollment_no=$_POST['enrollment_no'];
+		$item_name=$_POST['item_name'];
+		$quantity_item=$_POST['quantity_item'];
+		echo($enrollment_no);
+		$m->insert_canteen_data( $name, $enrollment_no, $item_name, $quantity_item);
+		header("location:./canteen.php");
+	}
 ?>
