@@ -24,26 +24,33 @@
 				<h1>New User?</h1>
 				<h2>Register Below</h2>
 				<form method="POST" action="./controller.php">
-					<div class="form-group" style="text-align: center;">
+					<div class="form-group">
 						<input type="text" class="form-control" name="user_name" placeholder="enter name">
 						<input type="email" class="form-control" name="user_email" placeholder="enter email">
-						<input type="text" class="form-control" name="user_dept" placeholder="enter department">
-						<input type="number" class="form-control" name="user_contact_number" placeholder="enter contact number">
+						<p>Select Department:</p>
+						<input type="radio" name="user_dept" value="GENERAL" checked>General<br />
+			  			<input type="radio" name="user_dept" value="IT" >I.T.<br />
+			  			<input type="radio" name="user_dept" value="EC.">E.C.<br />
+			  			<input type="radio" name="user_dept" value="CSE">C.S.E.<br />
+			  			<input type="radio" name="user_dept" value="EE">Electrical<br />
+			  			<br />
+						<input type="text" class="form-control" name="user_contact_number" placeholder="enter contact number">
 						<input type="password" class="form-control" name="user_password" placeholder="password">
 					</div>
 					<p>Select your type</p>
-					<input type="radio" id="teacher" name="user_type" value="AUTHORITY">College Authority
-  					<input type="radio" id="student" name="user_type" value="STUDENT" checked>Student
-  					<input type="number" id="parent_number" class="form-control" name="parent_contact_number" placeholder="enter parent's contact number">
+					<input type="radio" id="teacher" name="user_type" value="AUTHORITY" checked>College Authority
+  					<input type="radio" id="student" name="user_type" value="STUDENT" >Student
+  					<input type="text" id="parent_number" class="form-control" value="<?php echo NULL?>" name="parent_contact_number" placeholder="enter parent's contact number">
   					<br/><br/>
 					<input type="submit" class="btn btn-primary" name="register_btn" value="Register">
 					<input type="reset" class="btn btn-secondary" value="Reset Form">
 				</form>
+				<br/><br/>
 			</div>
 			<div class="col-sm-6">
 				<h1>Already have an Account?</h1>
 				<form method="POST" action="./controller.php">
-					<div class="form-group" style="text-align: center;">
+					<div class="form-group">
 						<input type="email" class="form-control" name="user_email" placeholder="enter email">
 						<input type="password" class="form-control" name="user_password" placeholder="password">
 					</div>
