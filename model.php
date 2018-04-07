@@ -21,5 +21,21 @@
 			session_destroy();
 			mysqli_close($this->conn);
 		}
+		function login_user( $email_param, $password_param ){
+			$login_query = "SELECT * FROM user_table WHERE EMAIL='$email_param'";
+			$result = $this->conn->query($login_query);
+
+			$row = $result->fetch_assoc();
+			$user_entered_password = $password_param;
+			$original_password = $row["PASSWORD"];
+
+			if ($result->num_rows > 0) {
+				if( $user_entered_password == $original_password ){
+					$_SESSION['user_email'] = $email_param;
+				}else{
+					echo "INVALID LOGIN PASSWORD";
+				}
+			}
+		}
 	}
 ?>
