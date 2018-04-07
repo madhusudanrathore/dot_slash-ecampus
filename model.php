@@ -1,5 +1,6 @@
 <?php
 	require './dbconnection.php';
+
 	class model{
 	    private $conn;
 	    function __construct(){
@@ -39,14 +40,26 @@
 			}
 		}
 		function get_main_page_blog_data( ){
-			$get_data_query = "SELECT * FROM main_page_blog_table ORDER BY PUBLISH_DATE DESC";
+			$get_data_query = "SELECT * FROM main_page_blog_table WHERE DEPARTMENT='GENERAL' ORDER BY PUBLISH_DATE DESC";
 			$result = $this->conn->query($get_data_query);
 			return $result;
 		}
+
+		function get_it_page_blog_data( ){
+			$get_data_query = "SELECT * FROM main_page_blog_table WHERE DEPARTMENT='I.T.' AND NOTICE_CATEGORY='BLOG' ORDER BY PUBLISH_DATE DESC";
+			$result = $this->conn->query($get_data_query);
+			return $result;
+		}
+
 		function get_achievement_data( ){
 			$get_data_query = "SELECT * FROM main_page_blog_table WHERE NOTICE_CATEGORY='ACHIEVEMENT' ORDER BY PUBLISH_DATE DESC";
 			$result = $this->conn->query($get_data_query);
 			return $result;
+		}
+		function new_blog( $email_param, $heading_param, $content_param, $department_type_param, $post_type_param ){
+			$email = $email_param;
+			$new_blog_query = "INSERT INTO main_page_blog_table ( DEPARTMENT, HEADING, DESCRIPTION, OWNER, NOTICE_CATEGORY ) VALUES ( '$department_type_param', '$heading_param', '$content_param', '$email', '$post_type_param' )";
+			if ($this->conn->query($new_blog_query) === FALSE ) {  echo "Error: " . $new_blog_query . " " . $this->conn->error;  }
 		}
 		function log_out(){
 			session_unset();
