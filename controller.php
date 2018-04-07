@@ -83,5 +83,6 @@
 		$author = $_POST['author_name'];
 		$department = $_POST['department_type'];
 		$m->get_book_list( $name, $author, $department );
-
+		header("location: ./elibrary_display.php");
+	}
 ?>
