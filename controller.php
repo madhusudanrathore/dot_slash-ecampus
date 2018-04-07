@@ -51,7 +51,7 @@
 		$m->lost_found_function( $email, $heading, $content, $type );
 		header("location: ./lost_found.php");
 	}
-if(isset($_POST['new_query_btn'])){/*IF NEW QUERY BUTTON IS CLICKED*/
+	if(isset($_POST['new_query_btn'])){/*IF NEW QUERY BUTTON IS CLICKED*/
 		$email = $_SESSION['user_email'];
 		$heading = $_POST['query_heading'];
 		$content = $_POST['query_content'];
@@ -70,5 +70,18 @@ if(isset($_POST['new_query_btn'])){/*IF NEW QUERY BUTTON IS CLICKED*/
 		$m->new_comment($qid,$content,$email);
 		header("location: ./department.php");
 	}
+	if(isset($_POST['insert_new_book'])){/*IF INSERT NEW BOOK BUTTON IS CLICKED*/
+		$name = $_POST['book_name'];
+		$author = $_POST['author_name'];
+		$url = $_POST['book_url'];
+		$department = $_POST['department_type'];
+		$m->new_book_entry( $name, $author, $department, $url );
+		header("location: ./elibrary.php");
+	}
+	if(isset($_POST['get_book_btn'])){/*IF INSERT NEW BOOK BUTTON IS CLICKED*/
+		$name = $_POST['book_name'];
+		$author = $_POST['author_name'];
+		$department = $_POST['department_type'];
+		$m->get_book_list( $name, $author, $department );
 
 ?>
