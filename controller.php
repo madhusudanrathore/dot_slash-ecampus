@@ -1,11 +1,10 @@
 <?php
 	session_start();
 	require './model.php';
-
 	$m = new model();
 
 	extract($_POST);
-	if(isset($_POST['register_btn'])){/*IF SIGN UP BUTTON IS CLICKED*/
+	if(isset($_POST['register_btn'])){/*IF REGISTER BUTTON IS CLICKED*/
 		$name = $_POST['user_name'];
 		$email = $_POST['user_email'];
 		$dept = $_POST['user_dept'];
@@ -31,22 +30,9 @@
 		$email = $_SESSION['user_email'];
 		$heading = $_POST['blog_heading'];
 		$content = $_POST['blog_content'];
-		$m->new_blog( $email, $heading, $content );
-		header("location: ./index.php");
-	}
-	if(isset($_POST['confirm_delete_blog'])){/*IF DELETE BLOG BUTTON IS CLICKED*/
-		echo "inside delete";
-		$email = $_SESSION['user_email'];
-		$heading = $_POST['blog_heading'];
-		$content = $_POST['blog_content'];
-		$m->delete_blog( $email, $heading, $content );
-		//header("location: ./index.php"); 
-	}
-	if(isset($_POST['confirm_edit_blog_btn'])){/*IF EDITING OF BLOG IS CONFIRMED*/
-		$email = $_SESSION['user_email'];
-		$heading = $_POST['blog_heading'];
-		$content = $_POST['blog_content'];
-		$m->edit_blog( $email, $heading, $content );
+		$department = $_POST['department_type'];
+		$post = $_POST['post_type'];
+		$m->new_blog( $email, $heading, $content, $department, $post );
 		header("location: ./index.php");
 	}
 ?>
