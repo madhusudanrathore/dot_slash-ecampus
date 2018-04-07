@@ -66,5 +66,21 @@
 			session_destroy();
 			mysqli_close($this->conn);
 		}
+		function lost_found_function( $email_param, $heading_param, $content_param, $type_param ){
+			if( $type_param == "LOST" ){
+				$heading_param = "LOST: " . $heading_param;
+				$lost_query = "INSERT INTO lost_found_table ( HEADING, DESCRIPTION, FOUND_BY ) VALUES ('$heading_param', '$content_param', '$email_param' )";
+				if ($this->conn->query($lost_query) === FALSE ) {  echo "Error: " . $lost_query . " " . $this->conn->error;  }
+			}else if( $type_param == "FOUND" ){
+				$heading_param = "FOUND: " . $heading_param;
+				$found_query = "INSERT INTO lost_found_table ( HEADING, DESCRIPTION, FOUND_BY ) VALUES ('$heading_param', '$content_param', '$email_param' )";
+				if ($this->conn->query($found_query) === FALSE ) {  echo "Error: " . $found_query . " " . $this->conn->error;  }
+			}
+		}
+		function get_lost_found_page_data(){
+			$get_data_query = "SELECT * FROM lost_found_table ORDER BY PUBLISH_DATE DESC";
+			$result = $this->conn->query($get_data_query);
+			return $result;
+		}
 	}
 ?>
