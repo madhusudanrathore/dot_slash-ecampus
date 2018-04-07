@@ -15,7 +15,7 @@
 		$parent_contact = $_POST['parent_contact_number'];
 
 		$m->register_user( $name, $email,$dept, $contact, $password, $user_type,$parent_contact );
-		//header("location: ./index.php");
+		header("location: ./index.php");
 	}
 	if(isset($_POST['log_in_btn'])){/*IF LOG IN BUTTON IS CLICKED*/
 		$email = $_POST['user_email'];
