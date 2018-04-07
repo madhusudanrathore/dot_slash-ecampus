@@ -65,19 +65,25 @@
   		</div>
 	</nav>
 
-	<div class="jumbotron jumbotron-fluid" style="text-align: center;">
-		<h1 class="display-4">Welcome to E-LDCE!</h1>
-		<p class="lead">Making academics digital and easier</p>
-		<div style="float: right;">
-			<p>Hello! <b><?php echo $_SESSION['user_name']; ?></b></p>
-			<?php 
-				$type = $_SESSION['user_type'];
-				if( $type == "AUTHORITY"){
-			?>
-				<a href="./create_blog.php" target="_blank" class="btn btn-primary" value="New Blog">New Blog</a>
-			<?php } ?>
-			<form method="POST" action="./controller.php">
-				<input type="submit" class="btn btn-danger" name="log_out_btn" value="Log Out">
-			</form>
+		<div style="border-bottom: #0EA300 solid 2px;">
+			<div class="container">
+				<div class="row" style="padding-top: 10px;">
+					<div class="col-xs-6" align="left">
+						<h4>Hello! <b><?php echo $_SESSION['user_name']; ?></b></h4>
+							<?php 
+								$type = $_SESSION['user_type'];
+								if( $type == "AUTHORITY"){
+							?>
+								<a href="./create_blog.php" target="_blank" class="btn btn-primary" value="New Blog">New Blog</a>
+							<?php } ?>					
+					</div>
+
+					<div class="col-xs-6" align="right">
+						<form method="POST" action="./controller.php">
+							<input type="submit" class="btn btn-danger" name="log_out_btn" value="Log Out">
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
+		<br><br>	
