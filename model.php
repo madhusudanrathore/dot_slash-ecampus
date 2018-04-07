@@ -103,5 +103,20 @@
 			$result = $this->conn->query($get_data_query);
 			return $result;
 		}
+		function new_book_entry( $name_param, $author_param, $department_param ,$url_param ){
+			$new_book_query = "INSERT INTO book_list_table ( NAME, AUTHOR, DEPARTMENT, LINK ) VALUES ('$name_param', '$author_param', '$department_param' ,'$url_param' )";
+			if ($this->conn->query($new_book_query) === FALSE ) {  echo "Error: " . $new_book_query . " " . $this->conn->error;  }
+		}
+		function get_book_list( $name_param='', $author_param='', $department_param='' ){
+			if( $name_param == '' ){
+				$get_data_query = "SELECT * FROM book_list_table";
+				$result = $this->conn->query($get_data_query);
+				return $result;
+			}else{
+				$get_data_query = "SELECT * FROM book_list_table WHERE NAME LIKE '%$name_param%' OR AUTHOR LIKE '$author_param%' OR DEPARTMENT LIKE '%$department_param%'";
+				$result = $this->conn->query($get_data_query);
+				return $result;
+			}
+		}
 	}
 ?>
