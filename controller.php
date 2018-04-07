@@ -51,4 +51,24 @@
 		$m->lost_found_function( $email, $heading, $content, $type );
 		header("location: ./lost_found.php");
 	}
+if(isset($_POST['new_query_btn'])){/*IF NEW QUERY BUTTON IS CLICKED*/
+		$email = $_SESSION['user_email'];
+		$heading = $_POST['query_heading'];
+		$content = $_POST['query_content'];
+		$department = $_POST['department_type'];
+		$image_Arr=$_FILES["img"];
+
+		move_uploaded_file($image_Arr['tmp_name'], 'img/'.$image_Arr['name']);
+		$img=$image_Arr['name'];
+		$m->new_query( $email, $heading, $content, $department,$img);
+		header("location: ./department.php");
+	}
+	if(isset($_POST['new_comment_btn'])){/*IF NEW BLOG BUTTON IS CLICKED*/
+		$qid = $_POST['comment_id'];
+		$email = $_SESSION['user_email'];
+		$content = $_POST['comment'];
+		$m->new_comment($qid,$content,$email);
+		header("location: ./department.php");
+	}
+
 ?>
