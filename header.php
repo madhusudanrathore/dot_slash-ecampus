@@ -8,11 +8,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>E-LDCE</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
+	<!-- NAVIGATION BAR -->
+	<nav class="navbar navbar-inverse" >
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<a class="navbar-brand" href="index.php">E-Campus</a>
+    		</div>
+    		<ul class="nav navbar-nav">
+      			<li>
+      				<a href="index.php">HOME</a>
+      			</li>
+      			<!--CLUBS-->
+      			<li>
+      				<a class="dropdown-toggle" data-toggle="dropdown" href="#">CLUBS<span class="caret"></span></a>
+        			<ul class="dropdown-menu">
+			          <li><a href="#">CLUB 1</a></li>
+			          <li><a href="#">CLUB 2</a></li>
+			          <li><a href="#">CLUB 3</a></li>
+			        </ul>
+      			</li>
+      			<!-- ACHIEVEMENTS -->
+      			<li><a href="achievements.php">ACHIEVEMENTS</a></li>
+      			<!-- LIBRARY-->
+      			<li><a href="#">e-LIBRARY</a></li>
+      			<!--DEPARTMENTS-->
+      			<li class="dropdown">
+      				<a class="dropdown-toggle" data-toggle="dropdown" href="#">DEPARTMENTS<span class="caret"></span></a>
+        			<ul class="dropdown-menu">
+			          <li><a href="#">DEPARTMENT 1</a></li>
+			          <li><a href="#">DEPARTMENT 2</a></li>
+			          <li><a href="#">DEPARTMENT 3</a></li>
+			        </ul>
+      			</li>
+      			<!-- FACILITIES-->
+      			<li class="dropdown">
+      				<a class="dropdown-toggle" data-toggle="dropdown" href="#">FACILITIES<span class="caret"></span></a>
+        			<ul class="dropdown-menu">
+			          <li><a href="#">LOST &amp FOUND</a></li>
+			          <li><a href="#">CANTEEN</a></li>
+			          <li><a href="#">CAMPUS OLX</a></li>
+			        </ul>
+      			</li>
+    		</ul>
+  		</div>
+	</nav>
 
 	<div class="jumbotron jumbotron-fluid" style="text-align: center;">
 		<h1 class="display-4">Welcome to E-LDCE!</h1>
