@@ -6,7 +6,7 @@
 				<input type="text" name="query_heading" placeholder="heading goes here"><br /><br />
 				<textarea rows="10" cols="50" name="query_content" placeholder="content goes here"></textarea>
 				Select image to upload:
-    <input type="file" class="btn btn-info" name="img" id="fileToUpload"><br>
+    			<input type="file" class="btn btn-info" name="img" id="fileToUpload"><br>
 			</div>
 
 			<!-- SELECT DEPARTMENT -->
@@ -24,4 +24,4 @@
 		</form>
 	</div>
 
-<!-- <?php require './footer.php'; ?> -->
+<?php require './footer.php'; ?>
