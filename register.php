@@ -7,9 +7,9 @@
 </head>
 <body>
 
-	<div class="jumbotron jumbotron-fluid" style="text-align: center;">
-		<h1 class="display-4">Welcome to E-LDCE!</h1>
-		<p class="lead">Making academics digital easier</p>
+	<div class="jumbotron">
+		<h1 style="text-align: center;">WELCOME TO E-CAMPUS</h1>
+		<p class="lead" style="text-align: center;">Making academics digital easier</p>
 		<?php if(isset($_SESSION['user_email'])) { ?>
 		<form method="POST" action="./controller.php">
 			<span style="float: right;">Hello! <b><?php echo $_SESSION['user_name']; ?></b></span>
@@ -21,12 +21,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6">
-				<h1>New User?</h1>
-				<h2>Register Below</h2>
+				<h2 style="color: #0EA300; border-bottom: #0EA300 solid 2px;">New User?</h2>
+				<h3>Register Below</h3>
 				<form method="POST" action="./controller.php">
 					<div class="form-group">
-						<input type="text" class="form-control" name="user_name" placeholder="enter name">
-						<input type="email" class="form-control" name="user_email" placeholder="enter email">
+						<input type="text" class="form-control" name="user_name" placeholder="enter name"><br>
+						<input type="email" class="form-control" name="user_email" placeholder="enter email"><br>
 						<p>Select Department:</p>
 						<input type="radio" name="user_dept" value="GENERAL" checked>General<br />
 			  			<input type="radio" name="user_dept" value="IT" >I.T.<br />
@@ -34,7 +34,7 @@
 			  			<input type="radio" name="user_dept" value="CSE">C.S.E.<br />
 			  			<input type="radio" name="user_dept" value="EE">Electrical<br />
 			  			<br />
-						<input type="text" class="form-control" name="user_contact_number" placeholder="enter contact number">
+						<input type="text" class="form-control" name="user_contact_number" placeholder="enter contact number"><br>
 						<input type="password" class="form-control" name="user_password" placeholder="password">
 					</div>
 					<p>Select your type</p>
@@ -48,10 +48,11 @@
 				<br/><br/>
 			</div>
 			<div class="col-sm-6">
-				<h1>Already have an Account?</h1>
+				<h2 style="color: #0EA300; border-bottom: #0EA300 solid 2px;">Already have an account?</h2>
+				<h3>Make a new account</h3>
 				<form method="POST" action="./controller.php">
 					<div class="form-group">
-						<input type="email" class="form-control" name="user_email" placeholder="enter email">
+						<input type="email" class="form-control" name="user_email" placeholder="enter email"><br>
 						<input type="password" class="form-control" name="user_password" placeholder="password">
 					</div>
 					<input type="submit" class="btn btn-success" name="log_in_btn" value="Log In">
