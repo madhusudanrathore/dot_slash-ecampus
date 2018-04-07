@@ -30,7 +30,7 @@
 						<p>Select Department:</p>
 						<input type="radio" name="user_dept" value="GENERAL" checked>General<br />
 			  			<input type="radio" name="user_dept" value="IT" >I.T.<br />
-			  			<input type="radio" name="user_dept" value="EC.">E.C.<br />
+			  			<input type="radio" name="user_dept" value="EC">E.C.<br />
 			  			<input type="radio" name="user_dept" value="CSE">C.S.E.<br />
 			  			<input type="radio" name="user_dept" value="EE">Electrical<br />
 			  			<br />
