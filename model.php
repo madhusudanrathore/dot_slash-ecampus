@@ -118,5 +118,15 @@
 				return $result;
 			}
 		}
+		function insert_canteen_data( $name, $enrollment_no, $item_name, $quantity_item){
+			$sql="INSERT INTO canteen(name,enrollment_no,item_name,quantity_item) VALUES ('$name','$enrollment_no','$item_name','$quantity_item')";
+			$result = $this->conn->query($sql);
+			return $result;
+		}
+		function get_canteen_data(){
+			$sql="SELECT * FROM canteen";
+			$result = $this->conn->query($sql);
+			return $result;
+		}
 	}
 ?>
