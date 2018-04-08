@@ -94,4 +94,13 @@
 		$m->insert_canteen_data( $name, $enrollment_no, $item_name, $quantity_item);
 		header("location:./canteen.php");
 	}
+	if (isset($_POST['new_ad_btn'])) {/*IF NEW AD BUTTON IS CLICKED*/
+		$email = $_SESSION['user_email'];
+		$name = $_SESSION['user_name'];
+		$type = $_SESSION['user_type'];
+		$heading = $_POST['ad_heading'];
+		$content = $_POST['ad_content'];
+		$m->post_new_ad( $email, $name, $type, $heading, $content );
+		header("location:./olx_ad_display.php");
+	}
 ?>
