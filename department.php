@@ -26,8 +26,7 @@
 
 			<form action="./controller.php" method="post">
 			<input type="hidden" name="comment_id" value="<?php echo $row["query_id"] ?>" />
-			<textarea name="comment">write answer
-	    	</textarea>
+			<textarea name="comment" placeholder="write answer"></textarea>
 			<input type="submit" class="btn btn-success" name="new_comment_btn"/>
 			</form>
 		</div>
