@@ -23,9 +23,6 @@
 	<!-- NAVIGATION BAR -->
 	<nav class="navbar navbar-inverse" >
   		<div class="container-fluid">
-    		<div class="navbar-header">
-      			<a class="navbar-brand" href="index.php">E-Campus</a>
-    		</div>
     		<ul class="nav navbar-nav">
       			<li>
       				<a href="index.php">HOME</a>
@@ -42,25 +39,42 @@
       			<!-- ACHIEVEMENTS -->
       			<li><a href="achievements.php">ACHIEVEMENTS</a></li>
       			<!-- LIBRARY-->
-      			<li><a href="#">e-LIBRARY</a></li>
+      			<li><a href="elibrary.php">e-LIBRARY</a></li>
       			<!--DEPARTMENTS-->
       			<li class="dropdown">
-      				<a class="dropdown-toggle" data-toggle="dropdown" href="#">DEPARTMENTS<span class="caret"></span></a>
+      				<a class="dropdown-toggle" data-toggle="dropdown" href="department.php">DEPARTMENTS<span class="caret"></span></a>
         			<ul class="dropdown-menu">
-			          <li><a href="#">DEPARTMENT 1</a></li>
-			          <li><a href="#">DEPARTMENT 2</a></li>
-			          <li><a href="#">DEPARTMENT 3</a></li>
+			          <li><a href="it_index.php">IT</a></li>
+			          <li><a href="ec_index.php">EC</a></li>
+			          <li><a href="cse_index.php">CSE</a></li>
 			        </ul>
       			</li>
       			<!-- FACILITIES-->
       			<li class="dropdown">
       				<a class="dropdown-toggle" data-toggle="dropdown" href="#">FACILITIES<span class="caret"></span></a>
         			<ul class="dropdown-menu">
-			          <li><a href="#">LOST &amp FOUND</a></li>
-			          <li><a href="#">CANTEEN</a></li>
-			          <li><a href="#">CAMPUS OLX</a></li>
+			          <li><a href="lost_found.php">LOST &amp FOUND</a></li>
+			          <li><a href="canteen.php">CANTEEN</a></li>
+			          <li><a href="query.php">QUERIES?</a></li>
 			        </ul>
       			</li>
+      			<!-- OLX -->
+      			<li class="dropdown">
+      				<a class="dropdown-toggle" data-toggle="dropdown" href="#">CAMPUS OLX<span class="caret"></span></a>
+        			<ul class="dropdown-menu">
+			          <li><a href="olx_new_post.php">POST AD</a></li>
+			          <li><a href="olx_ad_display.php">SEARCH</a></li>
+			        </ul>
+      			</li>
+      			<!-- HIRE A VEHICLE-->
+      			<li class="dropdown">
+      				<a class="dropdown-toggle" data-toggle="dropdown" href="#">HIRE A VEHICLE<span class="caret"></span></a>
+        			<ul class="dropdown-menu">
+			          <li><a href="forhire_new_post.php">POST</a></li>
+			          <li><a href="forhire_display.php">SEARCH</a></li>
+			        </ul>
+      			</li>
+
     		</ul>
   		</div>
 	</nav>
