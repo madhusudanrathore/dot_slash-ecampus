@@ -46,11 +46,20 @@
 		}
 
 		function get_it_page_blog_data( ){
-			$get_data_query = "SELECT * FROM main_page_blog_table WHERE DEPARTMENT='I.T.' AND NOTICE_CATEGORY='BLOG' ORDER BY PUBLISH_DATE DESC";
+			$get_data_query = "SELECT * FROM main_page_blog_table WHERE DEPARTMENT='IT' AND NOTICE_CATEGORY='BLOG' ORDER BY PUBLISH_DATE DESC";
 			$result = $this->conn->query($get_data_query);
 			return $result;
 		}
-
+		function get_ec_page_blog_data( ){
+			$get_data_query = "SELECT * FROM main_page_blog_table WHERE DEPARTMENT='EC' AND NOTICE_CATEGORY='BLOG' ORDER BY PUBLISH_DATE DESC";
+			$result = $this->conn->query($get_data_query);
+			return $result;
+		}
+		function get_cse_page_blog_data( ){
+			$get_data_query = "SELECT * FROM main_page_blog_table WHERE DEPARTMENT='CSE' AND NOTICE_CATEGORY='BLOG' ORDER BY PUBLISH_DATE DESC";
+			$result = $this->conn->query($get_data_query);
+			return $result;
+		}
 		function get_achievement_data( ){
 			$get_data_query = "SELECT * FROM main_page_blog_table WHERE NOTICE_CATEGORY='ACHIEVEMENT' ORDER BY PUBLISH_DATE DESC";
 			$result = $this->conn->query($get_data_query);
@@ -128,8 +137,8 @@
 			return $result;
 		}
 		function post_new_ad(  $email_param, $name_param, $type_param, $heading_param, $content_param ){
-			$login_query = "SELECT * FROM user_table WHERE EMAIL='$email_param'";
-			$result = $this->conn->query($login_query);
+			$new_ad_query = "SELECT * FROM user_table WHERE EMAIL='$email_param'";
+			$result = $this->conn->query($new_ad_query);
 
 			$row = $result->fetch_assoc();
 			$contact_number = $row["CONTACT_NUMBER"];
