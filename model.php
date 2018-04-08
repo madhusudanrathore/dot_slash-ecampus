@@ -128,5 +128,21 @@
 			$result = $this->conn->query($sql);
 			return $result;
 		}
+		function post_new_ad(  $email_param, $name_param, $type_param, $heading_param, $content_param ){
+			$login_query = "SELECT * FROM user_table WHERE EMAIL='$email_param'";
+			$result = $this->conn->query($login_query);
+
+			$row = $result->fetch_assoc();
+			$contact_number = $row["CONTACT_NUMBER"];
+
+			$sql="INSERT INTO campus_olx_table( EMAIL, NAME, USER_TYPE, CONTACT_NUMBER, HEADING, DESCRIPTION ) VALUES ('$email_param','$name_param','$type_param', '$contact_number','$heading_param', '$content_param')";
+			$result = $this->conn->query($sql);
+			return $result;
+		}
+		function get_all_ad(){
+			$return_ad_query = "SELECT * FROM campus_olx_table";
+			$result = $this->conn->query($return_ad_query);
+			return $result;
+		}
 	}
 ?>
