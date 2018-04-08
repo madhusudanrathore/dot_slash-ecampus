@@ -91,9 +91,9 @@
 			$result = $this->conn->query($get_data_query);
 			return $result;
 		}
-		function new_query( $email_param, $heading_param, $content_param, $department_type_param,$img_param){
+		function new_query( $email_param, $heading_param, $content_param, $department_type_param,$img_param,$std_no_param,$prof_email_param){
 			$email = $email_param;
-			$new_query_query = "INSERT INTO query_table ( DEPARTMENT, HEADING, DESCRIPTION, OWNER ,image) VALUES ( '$department_type_param', '$heading_param', '$content_param', '$email','$img_param' )";
+			$new_query_query = "INSERT INTO query_table ( DEPARTMENT, HEADING, DESCRIPTION, OWNER ,image,STD_REQ_LIVE,PROF_ID) VALUES ( '$department_type_param', '$heading_param', '$content_param', '$email','$img_param','$std_no_param','$prof_email_param' )";
 			if ($this->conn->query($new_query_query) === FALSE ) {  echo "Error: " . $new_query_query . " " . $this->conn->error;  }
 		}
 		function get_query_data( ){
