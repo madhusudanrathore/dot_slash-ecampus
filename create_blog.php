@@ -10,11 +10,11 @@
 			<!-- SELECT DEPARTMENT -->
 			<p>Select Department:</p>
 			<input type="radio" name="department_type" value="GENERAL" checked>General<br />
+			<input type="radio" name="department_type" value="CLUB">Clubs<br />
   			<input type="radio" name="department_type" value="IT" >I.T.<br />
   			<input type="radio" name="department_type" value="EC">E.C.<br />
   			<input type="radio" name="department_type" value="CSE">C.S.E.<br />
   			<input type="radio" name="department_type" value="EE">Electrical<br />
-			<input type="radio" name="department_type" value="CLUB">Clubs<br />
   			<br /><br />
 
   			<!-- SELECT POST TYPE -->

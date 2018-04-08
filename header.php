@@ -29,12 +29,13 @@
       			</li>
       			<!--CLUBS-->
       			<li>
-      				<a class="dropdown-toggle" data-toggle="dropdown" href="#">CLUBS<span class="caret"></span></a>
+      				<a href="club.php">CLUB</a>
+      				<!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#">CLUBS<span class="caret"></span></a>
         			<ul class="dropdown-menu">
 			          <li><a href="#">CLUB 1</a></li>
 			          <li><a href="#">CLUB 2</a></li>
 			          <li><a href="#">CLUB 3</a></li>
-			        </ul>
+			        </ul> -->
       			</li>
       			<!-- ACHIEVEMENTS -->
       			<li><a href="achievements.php">ACHIEVEMENTS</a></li>

@@ -2,7 +2,6 @@
 	session_start();
 	require './model.php';
 	$m = new model();
-
 	extract($_POST);
 	if(isset($_POST['register_btn'])){/*IF REGISTER BUTTON IS CLICKED*/
 		$name = $_POST['user_name'];
@@ -12,7 +11,6 @@
 		$password = $_POST['user_password'];
 		$user_type = $_POST['user_type'];
 		$parent_contact = $_POST['parent_contact_number'];
-
 		$m->register_user( $name, $email,$dept, $contact, $password, $user_type,$parent_contact );
 		header("location: ./index.php");
 	}
@@ -69,7 +67,6 @@
 			$mail = mail($to,$subject,$txt,$headers);
 		}
 		$image_Arr=$_FILES["img"];
-
 		move_uploaded_file($image_Arr['tmp_name'], 'img/'.$image_Arr['name']);
 		$img=$image_Arr['name'];
 		$m->new_query( $email, $heading, $content, $department,$img,$student,$prof_email);

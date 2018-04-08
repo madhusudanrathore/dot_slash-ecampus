@@ -3,6 +3,8 @@
 ?>
 
 <div class="container">
+	<div class="row">
+		<div class="col-md-10">
 	<h3 style="color: #0EA300; border-bottom: #0EA300 solid 2px; margin-top: 2px;">CANTEEN</h3>
 	<div class="jumbotron">
 		
@@ -23,5 +25,8 @@
 				<input class="btn btn-success" type="submit" name="order" value="Order">
 			</div>
 		</form>
+	</div>
+	</div>
+	<?php require 'utility_display.php' ?>
 	</div>
 </div>

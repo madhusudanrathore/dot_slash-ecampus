@@ -12,9 +12,9 @@
 			<h2 class="display-4"><?php echo $row["HEADING"]; ?></h2>
 			<p class="lead"><?php echo $row["DESCRIPTION"]; ?></p>
 			<img height="100" src="img/<?php echo $row['image'];  ?>">
-			<p class="lead">published by <?php echo $row["OWNER"]. " of " .  $row["DEPARTMENT"]." department"; ?></p>
-
-			<h4>comments:</h4>
+			<p class="lead" style="font-size: 15px; float: right;">published by <?php echo $row["OWNER"]. " of " .  $row["DEPARTMENT"]." department"; ?></p>
+		</div>
+			<h4><label>Comments:</label></h4>
 			<?php
 				$qid = $row["query_id"];
 				$result2 = $m->get_comments($qid);
@@ -26,11 +26,11 @@
 
 			<form action="./controller.php" method="post">
 			<input type="hidden" name="comment_id" value="<?php echo $row["query_id"] ?>" />
-			<textarea name="comment" placeholder="write answer"></textarea>
-			<input type="submit" class="btn btn-success" name="new_comment_btn"/>
+			<textarea name="comment" style="width: 100%;" placeholder="write answer"></textarea><br><br>
+			<input type="submit" class="btn btn-success" name="new_comment_btn"/><br><br>
 			</form>
-		</div>
-	</div>
+		
+	
 	<?php }
 			}else{
 		?>
@@ -38,3 +38,4 @@
 		<h1>NO BLOGS TO DISPLAY!</h1>
 		<h4>Start blogging today!</h4>
 		<?php } ?>
+</div>

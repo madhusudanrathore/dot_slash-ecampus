@@ -3,6 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10">
+				<h3 style="color: #0EA300; border-bottom: #0EA300 solid 2px;">EC DEPARTMENT</h3>
 			<?php
 				$m = new model();
 				$result = $m->get_ec_page_blog_data();

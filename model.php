@@ -1,6 +1,5 @@
 <?php
 	require './dbconnection.php';
-
 	class model{
 	    private $conn;
 	    function __construct(){
@@ -22,7 +21,6 @@
 		function login_user( $email_param, $password_param ){
 			$login_query = "SELECT * FROM user_table WHERE EMAIL='$email_param'";
 			$result = $this->conn->query($login_query);
-
 			$row = $result->fetch_assoc();
 			$user_entered_password = $password_param;
 			$original_password = $row["PASSWORD"];
@@ -44,7 +42,6 @@
 			$result = $this->conn->query($get_data_query);
 			return $result;
 		}
-
 		function get_it_page_blog_data( ){
 			$get_data_query = "SELECT * FROM main_page_blog_table WHERE DEPARTMENT='IT' AND NOTICE_CATEGORY='BLOG' ORDER BY PUBLISH_DATE DESC";
 			$result = $this->conn->query($get_data_query);
@@ -144,10 +141,8 @@
 		function post_new_ad(  $email_param, $name_param, $type_param, $heading_param, $content_param ){
 			$new_ad_query = "SELECT * FROM user_table WHERE EMAIL='$email_param'";
 			$result = $this->conn->query($new_ad_query);
-
 			$row = $result->fetch_assoc();
 			$contact_number = $row["CONTACT_NUMBER"];
-
 			$sql="INSERT INTO campus_olx_table( EMAIL, NAME, USER_TYPE, CONTACT_NUMBER, HEADING, DESCRIPTION ) VALUES ('$email_param','$name_param','$type_param', '$contact_number','$heading_param', '$content_param')";
 			$result = $this->conn->query($sql);
 			return $result;
@@ -160,10 +155,8 @@
 		function post_new_hire(  $email_param, $name_param, $type_param, $heading_param, $content_param ){
 			$new_hire_query = "SELECT * FROM user_table WHERE EMAIL='$email_param'";
 			$result = $this->conn->query($new_hire_query);
-
 			$row = $result->fetch_assoc();
 			$contact_number = $row["CONTACT_NUMBER"];
-
 			$sql="INSERT INTO for_hire_table( EMAIL, NAME, USER_TYPE, CONTACT_NUMBER, HEADING, DESCRIPTION ) VALUES ('$email_param','$name_param','$type_param', '$contact_number','$heading_param', '$content_param')";
 			$result = $this->conn->query($sql);
 			return $result;
