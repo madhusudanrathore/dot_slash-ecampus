@@ -56,11 +56,23 @@
 		$heading = $_POST['query_heading'];
 		$content = $_POST['query_content'];
 		$department = $_POST['department_type'];
+		$student = $_POST['std_no'];
+		$prof_email = $_POST['prof_id'];
+		if($student > 0){
+			ini_set('SMTP','smtp.gmail.com');
+			ini_set('smtp_port',465);
+			$to = $prof_email;
+			$subject = "REQUEST FOR LIVE SESSION\n";
+			$txt = "Need extra lecture to discuss the doubt where number of students will be: $student";
+			$headers = "From: nftnidhi@gmail.com";
+			mail($to,$subject,$txt,$headers);
+			$mail = mail($to,$subject,$txt,$headers);
+
 		$image_Arr=$_FILES["img"];
 
 		move_uploaded_file($image_Arr['tmp_name'], 'img/'.$image_Arr['name']);
 		$img=$image_Arr['name'];
-		$m->new_query( $email, $heading, $content, $department,$img);
+		$m->new_query( $email, $heading, $content, $department,$img,$student,$prof_email);
 		header("location: ./department.php");
 	}
 	if(isset($_POST['new_comment_btn'])){/*IF NEW BLOG BUTTON IS CLICKED*/
