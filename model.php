@@ -88,8 +88,7 @@
 			if ($this->conn->query($new_query_query) === FALSE ) {  echo "Error: " . $new_query_query . " " . $this->conn->error;  }
 		}
 		function get_query_data( ){
-			$get_data_query = "SELECT * FROM query_table";
-			$get_comments = "SELECT * FROM comments WHERE ";
+			$get_data_query = "SELECT * FROM query_table ORDER BY query_id DESC";
 			$result = $this->conn->query($get_data_query);
 			return $result;
 		}
