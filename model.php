@@ -143,5 +143,21 @@
 			$result = $this->conn->query($return_ad_query);
 			return $result;
 		}
+		function post_new_hire(  $email_param, $name_param, $type_param, $heading_param, $content_param ){
+			$new_hire_query = "SELECT * FROM user_table WHERE EMAIL='$email_param'";
+			$result = $this->conn->query($new_hire_query);
+
+			$row = $result->fetch_assoc();
+			$contact_number = $row["CONTACT_NUMBER"];
+
+			$sql="INSERT INTO for_hire_table( EMAIL, NAME, USER_TYPE, CONTACT_NUMBER, HEADING, DESCRIPTION ) VALUES ('$email_param','$name_param','$type_param', '$contact_number','$heading_param', '$content_param')";
+			$result = $this->conn->query($sql);
+			return $result;
+		}
+		function get_all_hire(){
+			$return_ad_query = "SELECT * FROM for_hire_table";
+			$result = $this->conn->query($return_ad_query);
+			return $result;
+		}
 	}
 ?>
