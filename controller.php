@@ -67,7 +67,7 @@
 			$headers = "From: nftnidhi@gmail.com";
 			mail($to,$subject,$txt,$headers);
 			$mail = mail($to,$subject,$txt,$headers);
-
+		}
 		$image_Arr=$_FILES["img"];
 
 		move_uploaded_file($image_Arr['tmp_name'], 'img/'.$image_Arr['name']);
