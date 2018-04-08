@@ -103,4 +103,13 @@
 		$m->post_new_ad( $email, $name, $type, $heading, $content );
 		header("location:./olx_ad_display.php");
 	}
+	if (isset($_POST['new_hire_btn'])) {/*IF NEW HIRE BUTTON IS CLICKED*/
+		$email = $_SESSION['user_email'];
+		$name = $_SESSION['user_name'];
+		$type = $_POST['vehicle_type'];
+		$heading = $_POST['hire_heading'];
+		$content = $_POST['hire_content'];
+		$m->post_new_hire( $email, $name, $type, $heading, $content );
+		header("location:./forhire_display.php");
+	}
 ?>
