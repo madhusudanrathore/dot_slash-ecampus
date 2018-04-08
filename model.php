@@ -65,6 +65,11 @@
 			$result = $this->conn->query($get_data_query);
 			return $result;
 		}
+		function get_club_blog_data(){
+			$get_data_query = "SELECT * FROM main_page_blog_table WHERE  DEPARTMENT='CLUB' ORDER BY PUBLISH_DATE DESC";
+			$result = $this->conn->query($get_data_query);
+			return $result;
+		}
 		function new_blog( $email_param, $heading_param, $content_param, $department_type_param, $post_type_param ){
 			$email = $email_param;
 			$new_blog_query = "INSERT INTO main_page_blog_table ( DEPARTMENT, HEADING, DESCRIPTION, OWNER, NOTICE_CATEGORY ) VALUES ( '$department_type_param', '$heading_param', '$content_param', '$email', '$post_type_param' )";
