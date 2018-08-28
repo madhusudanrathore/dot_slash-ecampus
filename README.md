@@ -7,7 +7,7 @@
   <li>Jaini Patel</li>
 </ul>
 
-<h1>PROJECT Description</h1>
+<h1>Project Description</h1>
 Our project will be consisting of all the details about campus functioning and implementing most of them digitally to make student's as well as college authority's life easier.
 
 <h1>Key Functionalities</h1>
