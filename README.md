@@ -1,7 +1,6 @@
-# dotSlash_e-campus
+# Dot Slash E-campus
 
-<h1>Team Theme: E-Campus</h1>
-Team Members
+<h1>Team Members</h1>
 <ul>
   <li>Madhusudan Rathore</li>
   <li>Nidhi Patel</li>
