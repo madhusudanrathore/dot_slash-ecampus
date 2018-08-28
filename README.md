@@ -1,8 +1,9 @@
 # dotSlash_e-campus
+
 # TEAM THEME: E-CAMPUS
-TEAM MEMBER 1:  MADHUSUDAN RATHORE
-TEAM MEMBER 2: NIDHI PATEL
-TEAM MEMBER 3: JAINI  PATEL
+Team Member 1): Madhusudan Rathore
+Team Member 2): Nidhi Patel
+Team Member 3): Jaini Patel
 
 # PROJECT DESCRIPTION
 Our project will be consisting of all the details about campus functioning and implementing most of them digitally to make student's as well as college authority's life easier.
