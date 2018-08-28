@@ -1,6 +1,6 @@
 # dotSlash_e-campus
 
-# TEAM THEME: E-CAMPUS
+<h1>Team Theme: E-Campus</h1>
 Team Members
 <ul>
   <li>Madhusudan Rathore</li>
@@ -8,30 +8,31 @@ Team Members
   <li>Jaini Patel</li>
 </ul>
 
-# PROJECT DESCRIPTION
+<h1>PROJECT Description</h1>
 Our project will be consisting of all the details about campus functioning and implementing most of them digitally to make student's as well as college authority's life easier.
 
-# Key functions:
+<h1>Key Functionalities</h1>
 <ol>
-  <li>fully dynamic</li>
-  <li>follows MVC design pattern</li>
-  <li>easy to use web application</li>
-  <li>spam safe</li>
-  <li>ACCESS LEVELS based web application</li>
-  <li>e-lost-found portal</li>
-  <li>e-library</li>
-  <li>campus olx</li>
-  <li>online query solving forums( campus's STACK OVERFLOW )</li>
-  <li>request live sessions instantly</li>
-  <li>HIRE-A-VEHICLE</li>
-  <li>payment portals</li>
-  <li>departmental/achievement notices</li>
-  <li>CAMPUS updates</li>
-  <li>blogging</li>
-  <li>e-canteen</li>
+  <li>Fully Dynamic</li>
+  <li>Follows MVC design pattern</li>
+  <li>Easy to use web application</li>
+  <li>Spam safe</li>
+  <li>Access Levels based web application</li>
+  <li>E-Lost-Found portal</li>
+  <li>E-Library</li>
+  <li>Campus olx</li>
+  <li>Online query solving forums( Campus's Stack Overflow )</li>
+  <li>Request live sessions instantly</li>
+  <li>Hire-a-Vechicle</li>
+  <li>Payment Portal</li>
+  <li>Departmental notices</li>
+  <li>Achievement notices</li>
+  <li>Campus updates</li>
+  <li>Blogging</li>
+  <li>E-Canteen</li>
 </ol>
 
-# Possible future functionalities:
+<h1>Possible Future Functionalities</h1>
 <ol>
   <li>Monthly performance reports of students( automated )</li>
   <li>Online tests</li>
